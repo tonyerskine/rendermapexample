@@ -1,9 +1,5 @@
 package rendermapexample
 
-
-import grails.rest.*
-import grails.converters.*
-
 class FooController {
 	static responseFormats = ['json', 'xml']
 	

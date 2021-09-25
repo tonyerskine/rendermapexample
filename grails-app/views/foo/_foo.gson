@@ -1,0 +1,13 @@
+import rendermapexample.Breakfast
+
+model {
+    Float cost
+    Date date
+    Map<String, Breakfast> mealsByPerson
+}
+
+json {
+    date date
+    cost cost
+    mealsByPerson mealsByPerson // HOW DO I RENDER THIS
+}

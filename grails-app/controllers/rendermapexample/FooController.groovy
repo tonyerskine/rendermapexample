@@ -9,7 +9,12 @@ class FooController {
             Jack: new Breakfast(meat: "sausage", eggs: "over easy", side: "pancakes")
         ]
 
-        render template: "foo", model: [cost: 12.34f, date: new Date(), mealsByPerson: mealsByPerson]
+        render template: "foo", model: [
+            cost: 12.34f,
+            date: new Date(),
+            mealsByPerson: mealsByPerson,
+            allCaps: params.boolean("allCaps")
+        ]
     }
 }
 

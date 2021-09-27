@@ -4,10 +4,12 @@ model {
     Float cost
     Date date
     Map<String, Breakfast> mealsByPerson
+    Boolean allCaps
 }
 
 json {
     date date
     cost cost
-    mealsByPerson mealsByPerson // HOW DO I RENDER THIS
+    note "The breakfasts should ${!allCaps ? 'not ' : ''}be capitalized."
+    mealsByPerson g.render(mealsByPerson){} // HOW DO I RENDER THIS AND PASS `allCaps` TO THE TEMPLATE
 }

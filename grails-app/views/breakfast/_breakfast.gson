@@ -1,0 +1,12 @@
+import rendermapexample.Breakfast
+
+model {
+    Breakfast breakfast
+    Boolean allCaps
+}
+
+json {
+    meat allCaps ? breakfast.meat.toUpperCase() : breakfast.meat
+    eggs allCaps ? breakfast.eggs.toUpperCase() : breakfast.eggs
+    side allCaps ? breakfast.side.toUpperCase() : breakfast.side
+}
